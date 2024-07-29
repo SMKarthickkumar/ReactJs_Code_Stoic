@@ -1,5 +1,7 @@
+import { useState } from "react";
 import "./App.css";
-import Hello from "./components/Hello";
+import Todo from "./components/Todo";
+import Header from "./components/Header";
 
 function App() {
   const person = {
@@ -9,9 +11,12 @@ function App() {
     setNumber: [1, 5, 6, 8],
   };
 
+  const [Name, setName] = useState({ FirstName: "", LastName: "" });
+
   return (
     <div className="App">
-      <Hello person={person} />
+      <Header />
+      <Todo />
     </div>
   );
 }
